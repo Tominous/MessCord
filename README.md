@@ -23,6 +23,20 @@ Edit:
 
 Change the exisiting `utils.js` in `node_modules\facebook-chat-api` with the one in this repo.
 
+`{appState: JSON.parse(fs.readFileSync('appstate.json', 'utf8'))}` Uses your cookies rather than logging in each time
+
+it can be replaced with `{email: "FB_EMAIL", password: "FB_PASSWORD"}` which is slower.
+
+to get your `appState` use the following:
+
+```javascript
+login(credentials, (err, api) => {
+    if(err) return console.error(err);
+
+    fs.writeFileSync('appstate.json', JSON.stringify(api.getAppState()));
+});
+```
+
 Make a Bot User and invite it to your server will full permissions.
 
 ---
