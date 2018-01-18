@@ -30,7 +30,7 @@ it can be replaced with `{email: "FB_EMAIL", password: "FB_PASSWORD"}` which is 
 to get your `appState` use the following:
 
 ```javascript
-login(credentials, (err, api) => {
+login({email: "FB_EMAIL", password: "FB_PASSWORD"}, (err, api) => {
     if(err) return console.error(err);
 
     fs.writeFileSync('appstate.json', JSON.stringify(api.getAppState()));
