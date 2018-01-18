@@ -13,13 +13,15 @@ When sending messages, your UserBot will delete your discod message and send the
 
 ---
 
-edit:
+Edit:
 
 `YOUR-GUILD-ID` - Your Guild (private Guild)
 
 `PARENT-ID` - Your text channel category (can be removed)
 
 `TOKEN` - your bot token
+
+Change the exisiting `utils.js` in `node_modules\facebook-chat-api` with the one in this repo.
 
 Make a Bot User and invite it to your server will full permissions.
 
